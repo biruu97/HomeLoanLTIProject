@@ -1,0 +1,21 @@
+<div>
+    <h1>Welcome</h1>
+    <button class="btn btn-success" (click)="toggleHistories()">Show/Hide History</button>
+    <button class="btn btn-primary" (click)="applyNow()">Apply Now</button>
+    <br><br><br>
+    
+    <div *ngIf="flag==1">
+        <table>
+            <tr>
+                <th>Application ID</th>
+                <th>Status of Application</th>
+            </tr>
+        
+            <tr *ngFor="let rec of records">
+                <td>{{rec.appId}}</td>
+                <td>{{rec.status}}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
